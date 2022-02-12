@@ -4,8 +4,14 @@
 
 ## Usage
 
-- With fish shell:
+- With fish
 
 ```shell
-realm | source
+realm fish | source
+```
+
+- With zsh
+
+```shell
+eval "$(realm zsh)"
 ```
