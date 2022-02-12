@@ -1,0 +1,12 @@
+{
+  "name": "realm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rajatsharma/realm.git",
+  "author": "Rajat Sharma <lunasunkaiser@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "install": "stack install",
+    "uninstall": "rm -rf `stack path --local-bin`/realm"
+  }
+}
