@@ -1,6 +1,6 @@
 # 🏜 realm
 
-> Ergonomic Development Environment for Web and NodeJS
+> Ergonomic Development Environment for Web Development
 
 ## Usage
 
