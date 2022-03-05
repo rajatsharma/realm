@@ -18,5 +18,5 @@ main = do
         | otherwise = "npm"
   path <- getEnv "PATH"
   let shell = head args
-  packageScripts <- readPackageJson shell packageManager
+  packageScripts <- if isNode then readPackageJson shell packageManager else pure []
   if isNode then putStrLn $ unlines [addToPath shell cwd, addInstallAbbr shell packageManager, unlines packageScripts] else pure ()
