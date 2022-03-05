@@ -1,16 +1,9 @@
 module Main where
 
+import Realm
 import Soothsayer ((***))
 import System.Directory (doesPathExist, getCurrentDirectory)
 import System.Environment (getArgs, getEnv, setEnv)
-
-addToPath :: String -> String -> String
-addToPath "fish" cwd = "set -g fish_user_paths {0}/node_modules/.bin $fish_user_paths" *** [cwd]
-addToPath _ cwd = "path+={0}/node_modules/.bin" *** [cwd]
-
-addInstallAbbr :: String -> String -> String
-addInstallAbbr "fish" packageManager = "abbr -a -g ins {0} install" *** [packageManager]
-addInstallAbbr _ _ = ""
 
 main :: IO ()
 main = do
@@ -25,4 +18,5 @@ main = do
         | otherwise = "npm"
   path <- getEnv "PATH"
   let shell = head args
-  if isNode then putStrLn $ unlines [addToPath shell cwd, addInstallAbbr shell packageManager] else pure ()
+  packageScripts <- readPackageJson shell packageManager
+  if isNode then putStrLn $ unlines [addToPath shell cwd, addInstallAbbr shell packageManager, unlines packageScripts] else pure ()
