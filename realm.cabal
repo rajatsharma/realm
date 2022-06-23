@@ -33,8 +33,10 @@ library
       aeson
     , base >=4.7 && <5
     , directory
+    , filepath
     , soothsayer
     , text
+    , transformers
   default-language: Haskell2010
 
 executable realm
@@ -48,7 +50,9 @@ executable realm
       aeson
     , base >=4.7 && <5
     , directory
+    , filepath
     , realm
     , soothsayer
     , text
+    , transformers
   default-language: Haskell2010

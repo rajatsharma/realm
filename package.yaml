@@ -23,6 +23,8 @@ dependencies:
 - soothsayer
 - aeson
 - text
+- filepath
+- transformers
 
 library:
   source-dirs: src

@@ -26,7 +26,7 @@ addInstallAbbr "fish" packageManager = "abbr -a -g ins {0} install" *** [package
 addInstallAbbr _ _ = ""
 
 addScriptAbbr :: String -> String -> Key -> String
-addScriptAbbr "fish" packageManager script = "abbr -a -g {0} {1} {2}" *** [scriptKey, packageManager, scriptKey]
+addScriptAbbr "fish" packageManager script = "abbr -a -g {0} {1} run {2}" *** [scriptKey, packageManager, scriptKey]
   where
     scriptKey = toString script
 addScriptAbbr _ _ _ = ""
