@@ -28,4 +28,4 @@ realm fish | source
 eval "$(realm zsh)"
 ```
 
-Now everytime you run a shell *realm* will read your `package.json` and generates alias for your scripts.
+Now everytime you run a shell *realm* will read your `package.json` and generate alias for your scripts.
