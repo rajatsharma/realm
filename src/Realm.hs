@@ -2,7 +2,7 @@
 
 module Realm where
 
-import Data.Aeson
+import Data.Aeson (Key, Value, decode, withObject, (.:))
 import Data.Aeson.Key (toString)
 import Data.Aeson.KeyMap (KeyMap, empty, keys)
 import Data.Aeson.Types (Parser, parseMaybe)
